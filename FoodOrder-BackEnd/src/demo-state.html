@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+<h1>State + Event + Data Communication</h1>
+<div id="app"></div>
+<script type="text/babel">
+// 1. what is state
+// -props vs component?
+
+    class App extends React.Component {
+        render() {
+            return(
+                <p>the data is {this.props.num}</p>
+                <button onClick ={
+                    () => {
+                        console.log(c)
+                    }
+
+                }>click me</button>
+            )
+        }
+    }
+
+    function fn(num){ //props是传入的数据，相当于API
+        console.log(num)
+    }
+    fn(10)
+
+    ReactDOM.render(
+        <App num = {10}/>,
+        document.getElementById('app')
+    )
+
+</script>
+<p>title</p>
+
+</body>
+</html>
